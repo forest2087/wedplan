@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<winginx>
+  <project>
+    <name>wedding.com</name>
+    <url>http://wedding.com/</url>
+    <root>home/wedding.com</root>
+  </project>
+</winginx>
