@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+        return view('welcome');
+});
+
+Route::any('home', 'HomeController@index');
+
+Route::any('foo', function () {
+    return 'Hello World';
 });
