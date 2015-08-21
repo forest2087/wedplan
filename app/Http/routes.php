@@ -11,12 +11,12 @@
 |
 */
 
+//home page route to welcome view
 Route::get('/', function () {
         return view('welcome');
 });
 
+//map /home to homecontroller
 Route::any('home', 'HomeController@index');
 
-Route::any('foo', function () {
-    return 'Hello World';
-});
+
