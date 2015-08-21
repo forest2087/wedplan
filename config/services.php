@@ -29,10 +29,12 @@ return [
         'region' => 'us-east-1',
     ],
 
+    //stripe keys stored in .env file
+    //keys are safe from version control
     'stripe' => [
         'model'  => App\User::class,
-        'key'    => '',
-        'secret' => '',
+        'key'    => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
     ],
 
 ];

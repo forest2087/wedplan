@@ -151,9 +151,16 @@ return [
         Jenssegers\Mongodb\MongodbServiceProvider::class,
 
         /*
+         * Laravel cashier, stripe api
+         */
+        Laravel\Cashier\CashierServiceProvider::class,
+
+        /*
          * Laravel IDE Helper
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+
 
     ],
 
