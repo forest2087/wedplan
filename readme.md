@@ -1,4 +1,4 @@
-## WedPlan - a proof-of-concept proejct made with Laravel 5.1
+## WedPlan - a proof-of-concept project made with Laravel 5.1
 
 ## Overview
 This app is a proof-of-concept of a SAAS product with Stripe API integrated for payments. The service is called WedPlan.
