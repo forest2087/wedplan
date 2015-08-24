@@ -2,5 +2,5 @@
 
 
 @section('content')
-    {{ $content }}
-@stop
+    BEST description
+    @stop

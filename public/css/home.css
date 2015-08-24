@@ -1,0 +1,153 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600,700);
+
+.pricing {
+    position: relative;
+    padding: 70px 0 30px;
+    display: table;
+    width: 100%;
+    border-spacing: 30px 0;
+    line-height: 1.4;
+}
+
+.package {
+    display: table-cell;
+    width: 33.33333%;
+    vertical-align: top;
+    height: 395px;
+    padding: 30px 20px 70px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+
+.package h1 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.free .plan-price {
+    font-size: 49px;
+    line-height: 1.29;
+}
+
+.plan-price {
+    color: #009999;
+    font-weight: 600;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.plan-price .term {
+    text-align: center;
+    color: #b2b2b2;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    margin: 5px 0 0 -5px;
+}
+
+.package ul {
+    list-style: none;
+    margin: 0;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0;
+}
+
+.package ul li:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+.package ul li:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
+.package ul li {
+    padding: 6px 10px;
+    position: relative;
+    list-style-type:none;
+}
+
+.button {
+    display: inline-block;
+    border: 0;
+    padding: 9px 15px;
+    background: #009999;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.package .button {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 35px;
+}
+
+button:hover {
+    color: #fff;
+    background: #00caca;
+    text-decoration: none;
+}
+
+.package:not(.free) .button:hover, .package:not(.free) .button:active {
+    background-color: #ff9233;
+}
+
+.package:not(.free) .button {
+    background-color: #ff7700;
+}
+
+.package.selected {
+    border: 2px solid #009999;
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.package.highlighted:before {
+    content: "recommended";
+}
+
+.highlight{color:#009999}
+.highlight{color:#00caca;font-size:36px;font-weight:600}
+
+.package.selected:before {
+    white-space: nowrap;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    padding: 3px 15px 5px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0 0 6px 6px;
+    background-color: #009999;
+}
+
+.plan-price .basic {
+    display: inline-block;
+    font-size: 72px;
+    line-height: 0.85;
+    vertical-align: top;
+    padding: 0 5px;
+}
+
+

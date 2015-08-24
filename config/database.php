@@ -51,11 +51,11 @@ return [
             'driver'   => 'mongodb',
             'host'     => env('DB_HOST', 'localhost'),
             'port'     => 27017,
-            'username'  => env('DB_USERNAME', ''),
-            'password'  => env('DB_PASSWORD', ''),
+            'username'  => env('DB_USERNAME', 'admin'),
+            'password'  => env('DB_PASSWORD', 'admin'),
             'database'  => env('DB_DATABASE', 'wedding'),
             'options' => array(
-                'db' => 'admin' // sets the authentication database required by mongo 3
+                'db' => 'admin' // sets the database required by mongo 3
             )
         ),
 

@@ -1,0 +1,27 @@
+[25-Jul-2015 22:36:39 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:36:41 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:38:55 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:38:55 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:38:55 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:38:55 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:38:56 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:38:56 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:38:56 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[25-Jul-2015 22:39:02 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Application' not found in C:\Winginx\home\wedding.com\bootstrap\app.php on line 14
+[21-Aug-2015 01:20:10 UTC] PHP Fatal error:  Call to undefined method Illuminate\Http\Request::currentRouteAction() in C:\Winginx\home\wedding.com\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php on line 207
+[21-Aug-2015 01:21:48 UTC] PHP Fatal error:  Call to undefined method Illuminate\Http\Request::getCurrentRoute() in C:\Winginx\home\wedding.com\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php on line 207
+[21-Aug-2015 01:21:49 UTC] PHP Fatal error:  Call to undefined method Illuminate\Http\Request::getCurrentRoute() in C:\Winginx\home\wedding.com\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php on line 207
+[23-Aug-2015 04:11:36 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Winginx\home\wedding.com\storage\framework\views\004ecca0abd2f672a053cf526ef784cc on line 3
+[23-Aug-2015 04:22:38 UTC] PHP Warning:  Uncaught exception 'ErrorException' with message 'Undefined variable: val' in C:\Winginx\home\wedding.com\storage\framework\views\004ecca0abd2f672a053cf526ef784cc:6
+Stack trace:
+#0 C:\Winginx\home\wedding.com\storage\framework\views\004ecca0abd2f672a053cf526ef784cc(6): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\Winginx\\home...', 6, Array)
+#1 C:\Winginx\home\wedding.com\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(42): include('C:\\Winginx\\home...')
+#2 C:\Winginx\home\wedding.com\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(58): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\Winginx\\home...', Array)
+#3 C:\Winginx\home\wedding.com\vendor\laravel\framework\src\Illuminate\View\View.php(138): Illuminate\View\Engines\CompilerEngine->get('C:\\Winginx\\home...', Array)
+#4 C:\Winginx\home\wedding.com\vendor\laravel\framework\src\Illuminate\View\View.php(107): Illuminate\View\View->getContents()
+#5 C:\Winginx\home in C:\Winginx\home\wedding.com\storage\framework\views\004ecca0abd2f672a053cf526ef784cc on line 6
+[23-Aug-2015 04:22:38 UTC] PHP Fatal error:  Cannot access empty property in C:\Winginx\home\wedding.com\storage\framework\views\004ecca0abd2f672a053cf526ef784cc on line 6
+[23-Aug-2015 06:29:04 UTC] PHP Fatal error:  Class 'App\Http\Controllers\STRIPE' not found in C:\Winginx\home\wedding.com\app\Http\Controllers\PaymentController.php on line 21
+[23-Aug-2015 18:23:20 UTC] PHP Fatal error:  Class 'HTML' not found in C:\Winginx\home\wedding.com\storage\framework\views\e6199762abdc66411fc7c6b31630e952 on line 59
+[23-Aug-2015 18:41:56 UTC] PHP Fatal error:  Call to private method App\Payment::processStripe() from context 'App\Http\Controllers\PaymentController' in C:\Winginx\home\wedding.com\app\Http\Controllers\PaymentController.php on line 32
+[23-Aug-2015 19:41:04 UTC] PHP Fatal error:  Out of memory (allocated 404750336) (tried to allocate 398458880 bytes) in C:\Winginx\home\wedding.com\storage\framework\views\e2c384e01b8d31bcc9c767c869707959 on line 3

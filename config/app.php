@@ -149,16 +149,30 @@ return [
          * MongoDB Provider
          */
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+        Jenssegers\Mongodb\Auth\PasswordResetServiceProvider::class,
 
         /*
-         * Laravel cashier, stripe api
+         * Laravel cashier, stripe subscription
          */
         Laravel\Cashier\CashierServiceProvider::class,
+
+
+        /*
+        * stripe api
+        */
+        Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
 
         /*
          * Laravel IDE Helper
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        /*
+         * Html and form helper
+         */
+        Collective\Html\HtmlServiceProvider::class,
+
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
 
 
 
@@ -209,9 +223,11 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Form'      => Illuminate\Html\FormFacade::class,
-        'Html'      => Illuminate\Html\HtmlFacade::class,
-
+//        'Form'      => Illuminate\Html\FormFacade::class,
+//        'Html'      => Illuminate\Html\HtmlFacade::class,
+        'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
