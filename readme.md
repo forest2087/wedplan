@@ -19,7 +19,7 @@ Due to the time constraint and hardware limitation, this app is developed on a W
 
 
 ## Nginx server config
-
+```
 server {
 	listen 127.0.0.1:80;
 	server_name wedplan.com www.wedplan.com;
@@ -53,7 +53,7 @@ server {
     }
 
 }
-
+```
 
 ##Tests
 
