@@ -58,3 +58,16 @@ server {
 ##Tests
 
 Unit tests can be found in the '/tests' folder. 'phpunit' to run all tests. 
+
+
+##Usage
+
+Test admin account: 
+user:admin@intouch.com
+pass:abc.123
+
+Test stripe credit cards:
+4242424242424242 for success visa payment
+
+For more test credit cards:
+Refer to https://stripe.com/docs/testing
