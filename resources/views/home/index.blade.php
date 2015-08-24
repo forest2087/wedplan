@@ -6,22 +6,18 @@
 
 
 @section('content')
-    <div class="row">
-        <div class="rsvps form col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+    <div class="row" style="margin-top:100px;">
+        <div class="rsvps form col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
             <h1 class="text-center">Simplify your wedding planning</h1>
 
-            <p class="text-center">While gifts are appreciated, please know that your well wishes &amp; presence is a
-                present
-                enough.
-                If you do want to give, you can fund our honeymoon via Paypal.</p>
+            <p class="text-center">Are you overwhelmed with your wedding planning? Have you decided to go with paper invites or email invites? RSVP lost in the mail? How can I send out a email to all my guests? </p>
 
-            <form method="post" target="_top" action="pay" style="margin-bottom:100px;">
-                <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}" />
+                <a href="/product">
                 <button type="submit" class="btn btn-default btn-lg btn-block"
                         style="max-width:300px; margin: 20px auto;">
-                    Send Money with Paypal
-                </button>
-            </form>
+                    Check out what we can offer you
+                </button></a>
+
         </div>
     </div>
 

@@ -14,7 +14,10 @@ class User extends Eloquent implements AuthenticatableContract, CanResetPassword
 {
     use Authenticatable, CanResetPassword;
 
-    protected $connection = 'mongodb';
+    /*
+     * use mongolab connection
+     */
+    protected $connection = 'mongolab';
 
     /**
      * The database table used by the model.
@@ -28,7 +31,7 @@ class User extends Eloquent implements AuthenticatableContract, CanResetPassword
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password', 'role_id'];
+    protected $fillable = ['name', 'email', 'password', 'role_id', 'billing_address', 'city', 'province', 'country', 'postal_code', 'phone', 'gender', 'dob', 'plan'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -37,8 +40,13 @@ class User extends Eloquent implements AuthenticatableContract, CanResetPassword
      */
     protected $hidden = ['password', 'remember_token'];
 
-
+    /**
+     * The default values for some attributes
+     *
+     * @var array
+     */
     protected $attributes = array(
         'role_id' => 1,
+        'plan' => 'lite',
     );
 }

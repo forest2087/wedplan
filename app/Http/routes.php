@@ -17,25 +17,32 @@ Route::get('/', function () {
 });
 
 
-//map /home to homecontroller
+//route /home to home controller
 Route::any('home', 'HomeController@index');
 
-//list users
-Route::any('user', 'UserController@index');
+//route /user to usercontroller
+Route::resource('user', 'UserController');
 
 //product page
 Route::resource('product', 'PackageController');
 
-//payment page
-Route::any('pay/{id}', 'PaymentController@index');
-Route::any('pay', 'PackageController@index');
+//payment page for products
+Route::any('pay/{id}', [
+    'middleware' => 'signup',
+    'uses' => 'PaymentController@index'
+]);
+Route::any('pay', [
+    'middleware' => 'auth',
+    'uses' => 'PaymentController@index'
+]);
 
 //process payment
-Route::post('process', 'PaymentController@process');
+Route::post('process', [
+    'middleware' => 'auth',
+    'uses' => 'PaymentController@process'
+]);
 
 //admin dashboard
-//Route::get('admin', 'AdminController@index');
-
 Route::group([
     'middleware' => 'auth',
 ], function () {
@@ -43,8 +50,7 @@ Route::group([
 });
 
 
-//user auth tutorial
-//https://laraveltips.wordpress.com/tag/user-registration-laravel-5-1/
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

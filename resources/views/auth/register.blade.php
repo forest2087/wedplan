@@ -18,7 +18,7 @@
 						</div>
 					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') . (isset($path)? '?redirect=' . $path:'') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">

@@ -10,7 +10,6 @@
         "jenssegers/mongodb": "^2.1",
         "barryvdh/laravel-ide-helper": "^2.0",
         "illuminate/html": "^5.0",
-        "laravel/cashier": "~5.0",
         "cartalyst/stripe-laravel": "2.0.*",
         "bestmomo/scafold": "dev-master",
         "laravelcollective/html": "5.1.*"

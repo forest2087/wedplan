@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -62,7 +65,21 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        //only admin allow to edit any user profile
+        if (Auth::user()->role_id<=1) {
+            $id = Auth::user()->id;
+        }
+
+        $user = User::find($id);
+
+        //return to user index if user not found
+        if(is_null($user)){
+            //flash msg error
+            \Session::flash('flash_danger', 'User not found.');
+            return redirect('user');
+        }
+
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -74,7 +91,23 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //only admin allow to update user
+        if (Auth::user()->role_id<=1) {
+            $id = Auth::user()->id;
+        }
+
+        $user = User::find($id);
+
+        //redirect to index if user not found
+        if(is_null($user)){
+            //flash msg error
+            \Session::flash('flash_danger', 'User not found.');
+            return redirect('user');
+        }
+
+        $user->update($request->all());
+
+        return redirect('user');
     }
 
     /**

@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <pre>
-    {{ var_dump($content) }}
-    </pre>
+
+    Payment successful. Thank you for purchasing the {{ $product }} package.
+
 @stop

@@ -54,6 +54,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
+                            {{--display subscription--}}
+                            <li><span style="color:#808393">{{strtoupper(Auth::user()->plan)}} Member</span></li>
+
+                            <li><a href="{{ url('/user/' . Auth::user()->id . '/edit') }}">Profile</a></li>
                             <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                         </ul>
                     </li>
@@ -65,13 +69,16 @@
 
 
 <div class="container">
+    {{--flash success msg--}}
     @if (Session::has('flash_success'))
         <div class="alert alert-success">{{Session::get('flash_success')}}</div>
     @endif
 
+    {{--flash warning msg--}}
     @if (Session::has('flash_danger'))
         <div class="alert alert-danger">{{Session::get('flash_danger')}}</div>
     @endif
+
 
     @yield('content')
 </div>

@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://wedding.com',
+    'url' => 'http://wedplan.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,10 +151,6 @@ return [
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Jenssegers\Mongodb\Auth\PasswordResetServiceProvider::class,
 
-        /*
-         * Laravel cashier, stripe subscription
-         */
-        Laravel\Cashier\CashierServiceProvider::class,
 
 
         /*

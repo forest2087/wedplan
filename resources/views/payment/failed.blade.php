@@ -2,7 +2,8 @@
 
 
 @section('content')
-    <pre>
-    {{ var_dump($content) }}
-    </pre>
+
+    Sorry the transaction failed.
+    Error: {{$content}}
+
 @stop

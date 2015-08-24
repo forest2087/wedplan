@@ -128,7 +128,7 @@
                             <div class="form-group">
                                 <label class="" for="selBillingMember">Billing Member</label>
                                 <select name="billing_member" class="form-control required" id="selBillingMember">
-                                    {{--<option value="{{ Auth::user()->name }}">{{ Auth::user()->name }}</option>--}}
+                                    <option value="{{ Auth::user()->name }}">{{ Auth::user()->name }}</option>
                                 </select>
                             </div>
                         </fieldset>

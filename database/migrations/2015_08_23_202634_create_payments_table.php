@@ -17,6 +17,7 @@ class CreatePaymentsTable extends Migration
             $table->string('stripe_id');
             $table->string('amount');
             $table->string('currency');
+            $table->string('product');
             $table->timestamps();
         });
     }

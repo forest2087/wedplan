@@ -11,14 +11,18 @@ use App\Http\Controllers\Controller;
 class PackageController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return Response
+     * Product overview page
+     * @return view
      */
     public function index() {
         return view('package.index')->with('content', 'product page');
     }
 
+    /**
+     * Product detailed description page
+     * @param $id
+     * @return $this
+     */
     public function show($id) {
         if (view()->exists('package.' . $id)) {
             return view('package.' . $id)->with('title', $id);

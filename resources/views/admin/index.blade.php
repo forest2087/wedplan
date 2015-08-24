@@ -4,32 +4,36 @@
 
 @section('content')
 
-    //only allow user with admin role to access admin dashboard
+    {{--only allow user with admin role to access admin dashboard--}}
     @if (Auth::user()->role_id>1)
 
-        <h1>List of Payments</h1>
-        <table class="table">
-            <thead>
-            <tr>
-                <td>Stripe ID</td>
-                <td>Amount</td>
-                <td>Currency</td>
-                <td>Transaction Time</td>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach ($payments as $payment)
-
+        @if (!empty($payments))
+            <h1>List of Payments</h1>
+            <table class="table">
+                <thead>
                 <tr>
-                    <td>{{$payment->stripe_id}}</td>
-                    <td>{{ $payment->amount}}</td>
-                    <td>{{ $payment->currency}}</td>
-                    <td>{{ $payment->created_at}}</td>
+                    <td>Stripe ID</td>
+                    <td>Amount</td>
+                    <td>Currency</td>
+                    <td>Transaction Time</td>
                 </tr>
+                </thead>
+                <tbody>
+                @foreach ($payments as $payment)
 
-            @endforeach
-            </tbody>
-        </table>
+                    <tr>
+                        <td>{{$payment->stripe_id}}</td>
+                        <td>{{ $payment->amount}}</td>
+                        <td>{{ $payment->currency}}</td>
+                        <td>{{ $payment->created_at}}</td>
+                    </tr>
+
+                @endforeach
+                </tbody>
+            </table>
+        @else
+            No payment received yet.
+        @endif
     @else
         Sorry, you do not have the permission to access admin dashboard.
     @endif

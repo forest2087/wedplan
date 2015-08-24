@@ -27,7 +27,7 @@ return [
     */
 
 //    'default' => env('DB_CONNECTION', 'mysql'),
-    'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => env('DB_CONNECTION', 'mongolab'),
 
     /*
     |--------------------------------------------------------------------------
@@ -46,6 +46,18 @@ return [
     */
 
     'connections' => [
+
+        'mongolab' => array(
+            'driver'   => 'mongodb',
+            'host'     => 'ds061148.mongolab.com',
+            'port'     => 61148,
+            'username'  => 'admin',
+            'password'  => 'admin',
+            'database'  => 'wedplan',
+            'options' => array(
+//                'db' => 'admin' // sets the database required by mongo 3
+            )
+        ),
 
         'mongodb' => array(
             'driver'   => 'mongodb',

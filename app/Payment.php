@@ -7,22 +7,43 @@ use Cartalyst\Stripe\Laravel\Facades\Stripe;
 class Payment extends Eloquent
 {
 
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
     protected $collection  = 'payments';
-    protected $connection = 'mongodb';
 
-    protected $fillable = ['stripe_id', 'amount', 'currency'];
+    /**
+     * The connection used by the model.
+     *
+     * @var string
+     */
+    protected $connection = 'mongolab';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['stripe_id', 'amount', 'currency', 'product'];
+
+    /*
+     * process stripe payment
+     *
+     * @return $charge and $errorObj
+     */
     public static function processStripe($customerInfo, $billingInfo, $product, $token, &$charge, &$errorObj)
     {
 
         try {
             $charge = Stripe::charges()->create([
-//            'customer' => $_POST['billing_member'].uniqid(),
                 'card' => $token,
                 'currency' => 'USD',
-                'amount' => $billingInfo['amount'],
+                'amount' => $billingInfo['total'],
                 "description" => "WedPlan Payment",
                 "statement_descriptor" => "WedPlan " . $product . " package",
+                //todo - each value is limited to 500 character, keep only necessary keys
                 "metadata" => array(
                     'product' => $product,
                     'customerInfo' => json_encode($customerInfo),
